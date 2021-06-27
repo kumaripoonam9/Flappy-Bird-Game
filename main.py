@@ -180,8 +180,7 @@ class Game:
                 # upper pipe
                 screen.blit(rotatedPipe, (self.pipesX[i], self.upperPipeY[i]))
 
-            screen.blit(pygame.transform.rotozoom(
-                bird, self.rotateAngle, 1), (self.birdX, self.birdY))
+            screen.blit(pygame.transform.rotozoom(bird, self.rotateAngle, 1), (self.birdX, self.birdY))
 
             # moving pipe
             self.movingPipe()
@@ -190,8 +189,7 @@ class Game:
             # game over
             self.gameOver()
             # displaying score
-            self.screenText(str(self.score), (255, 255, 255),
-                            600, 50, 68, "Fixedsys", bold=True)
+            self.screenText(str(self.score), (255, 255, 255), 600, 50, 68, "Fixedsys", bold=True)
 
             pygame.display.update()
             clock.tick(fps)
